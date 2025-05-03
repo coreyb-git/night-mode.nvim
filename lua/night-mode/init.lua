@@ -3,7 +3,7 @@ M = {}
 local state = 0
 local STATE_DAY = 1
 local STATE_NIGHT = 2
-local config = require("sunset.config")
+local config = require("night-mode.config")
 
 function M.init() end
 
@@ -41,7 +41,7 @@ local function timer_update()
 		vim.notify(
 			"Changing colorscheme to " .. col .. " (bg=" .. bg .. ")",
 			vim.log.levels.INFO,
-			{ title = "Sun light/dark mode", timeout = 5000 }
+			{ title = "Night Mode", timeout = 5000 }
 		)
 		vim.cmd("colorscheme " .. col)
 		vim.cmd("set bg=" .. bg)
@@ -57,7 +57,7 @@ function M.setup(opts)
 
 	if (config.light_colorscheme == "") or (config.dark_colorscheme == "") then
 		config.enabled = false
-		vim.notify("Missing colorscheme for sun plugin")
+		vim.notify("Missing colorscheme for Night Mode plugin")
 	end
 
 	if config.enabled then
