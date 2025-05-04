@@ -55,13 +55,15 @@ function M.setup(opts)
 		config[i] = v
 	end
 
-	if (config.light_colorscheme == "") or (config.dark_colorscheme == "") then
-		config.enabled = false
-		vim.notify("Missing colorscheme for Night Mode plugin")
-	end
-
 	if config.enabled then
-		timer_update()
+		vim.notify = require("notify")
+
+		if (config.light_colorscheme == "") or (config.dark_colorscheme == "") then
+			config.enabled = false
+			vim.notify("Missing colorscheme for Night Mode plugin")
+		else
+			timer_update()
+		end
 	end
 end
 
