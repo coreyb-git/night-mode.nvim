@@ -38,11 +38,7 @@ local function timer_update()
 	end
 
 	if change then
-		vim.notify(
-			"Changing colorscheme to " .. col .. " (bg=" .. bg .. ")",
-			vim.log.levels.INFO,
-			{ title = "Night Mode", timeout = 5000 }
-		)
+		vim.print("Night-Mode: Changing colorscheme to " .. col .. " (bg=" .. bg .. ")")
 		vim.cmd("colorscheme " .. col)
 		vim.cmd("set bg=" .. bg)
 	end
@@ -57,7 +53,7 @@ function M.setup(opts)
 
 	if (config.light_colorscheme == "") or (config.dark_colorscheme == "") then
 		config.enabled = false
-		vim.notify("Missing colorscheme for Night Mode plugin")
+		require("notify")("Missing colorscheme for Night-Mode plugin")
 	end
 
 	if config.enabled then
