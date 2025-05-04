@@ -5,7 +5,7 @@ Inspired by my annoyances with the werewolf plugin.
 Usage with lazy:
 ```
 return {
-	"coreyb-git/sunset.nvim",
+	"coreyb-git/night-mode.nvim",
 	dependencies = {
 		"rcarriga/nvim-notify", --optional: For displaying popup notification on theme change.
 
@@ -13,7 +13,11 @@ return {
 		"echasnovski/mini.nvim", --minicyan theme
 	},
 	opts = {
-		--enabled = false,
+		enabled = true,
+
+		hour_sunrise = 5,
+		hour_sunset = 17,
+
 		light_colorscheme = "newpaper",
 		light_bg = "light",
 		dark_colorscheme = "minicyan",
