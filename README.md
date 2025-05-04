@@ -23,6 +23,5 @@ return {
 		dark_colorscheme = "minicyan",
 		dark_bg = "light",
 	},
-	lazy = false,
 }
 ```
