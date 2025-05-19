@@ -18,11 +18,11 @@ return {
 		hour_sunrise = 5,
 		hour_sunset = 17,
 
-		light_colorscheme = "newpaper",
-		light_bg = "light",
+		day_colorscheme = "newpaper",
+		day_bg = "light",
 
-		dark_colorscheme = "minicyan",
-		dark_bg = "light",
+		night_colorscheme = "minicyan",
+		night_bg = "light",
 	},
 }
 ```

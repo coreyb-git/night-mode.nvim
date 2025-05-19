@@ -24,15 +24,15 @@ local function timer_update()
 	if SunUp then
 		if state ~= STATE_DAY then
 			change = true
-			col = config.light_colorscheme
-			bg = config.light_bg
+			col = config.day_colorscheme
+			bg = config.day_bg
 			state = STATE_DAY
 		end
 	else
 		if state ~= STATE_NIGHT then
 			change = true
-			col = config.dark_colorscheme
-			bg = config.dark_bg
+			col = config.night_colorscheme
+			bg = config.night_bg
 			state = STATE_NIGHT
 		end
 	end
@@ -52,7 +52,7 @@ function M.setup(opts)
 	end
 
 	if config.enabled then
-		if (config.light_colorscheme == "") or (config.dark_colorscheme == "") then
+		if (config.day_colorscheme == "") or (config.night_colorscheme == "") then
 			config.enabled = false
 			require("notify")("Missing colorscheme for Night-Mode plugin")
 		else
