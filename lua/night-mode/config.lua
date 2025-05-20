@@ -4,8 +4,10 @@ return {
 	hour_sunrise = 5,
 	hour_sunset = 17,
 
-	day_colorscheme = "",
+	day_colourscheme = "",
 	day_bg = "light",
-	night_colorscheme = "",
+	day_lualine = "",
+	night_colourscheme = "",
 	night_bg = "light",
+	night_lualine = "",
 }

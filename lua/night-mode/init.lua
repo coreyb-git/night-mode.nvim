@@ -24,15 +24,21 @@ local function timer_update()
 	if SunUp then
 		if state ~= STATE_DAY then
 			change = true
-			col = config.day_colorscheme
+			col = config.day_colourscheme
 			bg = config.day_bg
+			if config.day_lualine ~= "" then
+				require("lualine").setup({ options = { theme = config.day_lualine } })
+			end
 			state = STATE_DAY
 		end
 	else
 		if state ~= STATE_NIGHT then
 			change = true
-			col = config.night_colorscheme
+			col = config.night_colourscheme
 			bg = config.night_bg
+			if config.night_lualine ~= "" then
+				require("lualine").setup({ options = { theme = config.night_lualine } })
+			end
 			state = STATE_NIGHT
 		end
 	end
@@ -52,9 +58,9 @@ function M.setup(opts)
 	end
 
 	if config.enabled then
-		if (config.day_colorscheme == "") or (config.night_colorscheme == "") then
+		if (config.day_colourscheme == "") or (config.night_colourscheme == "") then
 			config.enabled = false
-			require("notify")("Missing colorscheme for Night-Mode plugin")
+			require("notify")("Missing colourscheme for Night-Mode plugin")
 		else
 			timer_update()
 		end
