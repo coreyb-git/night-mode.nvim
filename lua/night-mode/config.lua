@@ -6,8 +6,8 @@ return {
 
 	day_colourscheme = "",
 	day_bg = "light",
-	day_lualine = "",
+	day_lualine_theme = "",
 	night_colourscheme = "",
 	night_bg = "light",
-	night_lualine = "",
+	night_lualine_theme = "",
 }

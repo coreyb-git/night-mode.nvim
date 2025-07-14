@@ -20,11 +20,11 @@ return {
 
 		day_colourscheme = "newpaper",
 		day_bg = "light",
-		day_lualine = "",
+		day_lualine_theme = "",
 
 		night_colourscheme = "minicyan",
 		night_bg = "light",
-		night_lualine = "",
+		night_lualine_theme = "",
 	},
 }
 ```

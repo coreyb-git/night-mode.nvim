@@ -26,8 +26,8 @@ local function timer_update()
 			change = true
 			col = config.day_colourscheme
 			bg = config.day_bg
-			if config.day_lualine ~= "" then
-				require("lualine").setup({ options = { theme = config.day_lualine } })
+			if config.day_lualine_theme ~= "" then
+				require("lualine").setup({ options = { theme = config.day_lualine_theme } })
 			end
 			state = STATE_DAY
 		end
@@ -37,7 +37,7 @@ local function timer_update()
 			col = config.night_colourscheme
 			bg = config.night_bg
 			if config.night_lualine ~= "" then
-				require("lualine").setup({ options = { theme = config.night_lualine } })
+				require("lualine").setup({ options = { theme = config.night_lualine_theme } })
 			end
 			state = STATE_NIGHT
 		end
